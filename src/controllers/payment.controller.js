@@ -16,7 +16,7 @@ export const createPayment = async (req, res) => {
   const token = req.cookies.token || req.headers.authorization.split(" ")[1];
 
   try {
-    const orderResponse = await axios.get(`http://localhost:3005/api/orders/${orderId}`, {
+    const orderResponse = await axios.get(`https://revoire-order.onrender.com/api/orders/${orderId}`, {
       headers: {
         Authorization: `Bearer ${token}`
       }
